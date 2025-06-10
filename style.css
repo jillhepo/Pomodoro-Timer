@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+body{
+    background-color: #1e213f;
+    color: #d7e0ff;
+}
+
+.container{
+    text-align: center;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.timer{
+    display: inline-block;
+    padding: 10px;
+    width: 600px;
+    box-sizing: border-box;
+}
+
+main{
+    width: 25rem;
+    height: 25rem;
+    border-radius: 50%;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+}
+
+h1{
+    font-size: 2rem;
+    margin: 20px auto;
+}
+
+/*Div que contiene todo el contenido de la pantalla*/
+.button-container{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/*Diseño del circulo del medio*/
+.pomodoro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin: 2.5rem 0;
+    text-align: center;
+    border-radius: 50%;
+    background: #151932;
+    box-shadow: 20px 20px 42px #0e1021, -20px -20px 42px #1c2244;
+}
+
+.pomodoro::before{
+    content:"" ;
+    position: absolute;
+    border: 10px solid  royalblue;
+    border-radius: 50%;
+    width: 22rem;
+    height: 22rem;
+}
+
+/*Div que contiene los botones y el circulo*/
+.time{
+    font-size: 5rem !important;
+    margin: 20px auto;
+}
+
+/*Margenes del div que lleva los botones superiores*/
+.button-container{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/*Diseño de los botones superiores*/
+.button{
+    background-color: #2e325a;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    transition: all .2s ease-in;
+}
+
+/*Al pasar el cursor sobre los botones cambiará de color*/
+.button.active, .button:hover{
+    background-color: #020323;
+}
+.hidden{
+    display: block;
+}
+
+/*Parte del diseño y margenes de los botonos superiores*/
+.timer-display{
+    font-size: 5rem;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/*Distancia entre el circulo y los botones start y stop*/
+.buttons{
+    margin-top: 20px;
+}
+
+/*Diseño de los botones start y stop*/
+#start, #stop{
+    background-color: #2e325a;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    transition: all .2s ease-in;
+}
+
+/*Al pasar el cursor sobre el botón stop cambiará de color*/
+#stop:hover{
+    background-color: tomato;
+}
+
+/*Al pasar el cursor sobre el botón start cambiará de color*/
+#start:hover{
+    background-color: #219a52;
+}
+
+/*Diseño del mensaje superior*/
+#timer-message{
+    color: white;
+    background-color: tomato;
+    display: none;
+    padding: .5rem;
+    font-size: 1rem;
+    text-align: center;
+    border-radius: 1rem;
+}
+
+/*Responsiveness*/
+
+@media screen and (min-width:320px) and (max-width: 600px){
+    .container{
+        transform: scale(0.9);
+    }
+
+    .timer{
+        width: 500px;
+
+    }
+}
