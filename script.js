@@ -16,10 +16,11 @@ let myInterval = null
 //Show the default timer
 function showDefaultTimer() {
     pomodoro.style.display = "block"
-    short.style.display = "none"
-    long.style.display = "nome"
+    //Escondimos los tiempos short y long
+    short.style.display = "none" 
+    long.style.display = "none"
 }
-showDefaultTimer()
+showDefaultTimer() //Llame la función
 
 function hideAll(){
     timers.forEach((timer) => {
